@@ -47,6 +47,14 @@ def mean(list_of_numbers)
 
   # ====================
   # Your code goes here.
+  running_total = 0
+  list_of_numbers.each do |number|
+    running_total = running_total + number
+  end
+
+    mean_of_numbers = running_total/list_of_numbers.size.to_f
+
+  return mean_of_numbers
   # ====================
 end
 
@@ -64,6 +72,21 @@ def variance(list_of_numbers)
 
   # ====================
   # Your code goes here.
+  running_total = 0
+  list_of_numbers.each do |number|
+    running_total = running_total + number
+  end
+
+  mean_of_numbers = running_total/list_of_numbers.size.to_f
+
+  running_variance = 0
+  list_of_numbers.each do |number|
+    running_variance = running_variance + (number - mean_of_numbers)**2
+  end
+
+  mean_of_variance = running_variance/list_of_numbers.size.to_f
+
+  return mean_of_variance
   # ====================
 end
 
@@ -75,6 +98,23 @@ end
 def standard_deviation(list_of_numbers)
   # ====================
   # Your code goes here.
+  running_total = 0
+  list_of_numbers.each do |number|
+    running_total = running_total + number
+  end
+
+  mean_of_numbers = running_total/list_of_numbers.size.to_f
+
+  running_variance = 0
+  list_of_numbers.each do |number|
+    running_variance = running_variance + (number - mean_of_numbers)**2
+  end
+
+  mean_of_variance = running_variance/list_of_numbers.size.to_f
+
+  std_dev = Math.sqrt(mean_of_variance)
+
+  return std_dev
   # ====================
 end
 
